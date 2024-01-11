@@ -36,6 +36,6 @@ MultiPLY is a <strong>multisensory embodied</strong> large language model that c
  author = {Hong, Yining and Zheng, Zishuo and Chen, Peihao and Wang, Yian and Li, Junyan and Chen, Zhenfang and Gan, Chuang},
  title = {MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World},
  journal = {arXiv},
- year = {2023},
+ year = {2024},
 } 
 ```
