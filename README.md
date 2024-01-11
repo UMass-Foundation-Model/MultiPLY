@@ -30,6 +30,10 @@ MultiPLY is a <strong>multisensory embodied</strong> large language model that c
     <img src="figs/method.png" alt="Logo" width="80%">
   </p>
 
+We first encode the scene as an abstracted object-centric representation, while multisensory details
+of objects can only be unveiled when the agent executes an action and interacts with them. We devise a set of action tokens denoting the
+actions of agents to interact with the environment. The interaction results are appended back to the LLM via state tokens
+
 ## Citation
 ```
 @article{multiply,
