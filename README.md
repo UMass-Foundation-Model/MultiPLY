@@ -11,7 +11,7 @@ Embodied Large Language Model in 3D World </h1>
     <a href="https://people.csail.mit.edu/ganchuang">Chuang Gan</a>
   </p>
   <p align="center">
-    <a href='https://arxiv.org/abs/2307.12981'>
+    <a href='https://arxiv.org/abs/2401.08577'>
       <img src='https://img.shields.io/badge/Paper-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='Paper PDF'>
     </a>
     <a href='https://vis-www.cs.umass.edu/multiply/' style='padding-left: 0.5rem;'>
