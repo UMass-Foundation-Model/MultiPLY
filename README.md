@@ -34,6 +34,37 @@ We first encode the scene as an abstracted object-centric representation, while 
 of objects can only be unveiled when the agent executes an action and interacts with them. We devise a set of action tokens denoting the
 actions of agents to interact with the environment. The interaction results are appended back to the LLM via state tokens
 
+## Requirements
+TODO
+
+## Training
+We use FSDP training. It might differ on different clusters. An example on the trained cluster is:
+```
+RANDOM=$$
+DIV=1000
+OFFSET=24000
+MASTER_PORT=$(($RANDOM%$DIV+$OFFSET))
+export OMP_NUM_THREADS=1
+export TOKENIZERS_PARALLELISM=true
+NODE_RANK=${SLURM_PROCID}
+
+SLURM=${SLURM_NODELIST:0:3}
+ip=${SLURM}${SLURM_NODELIST:4:2}
+
+# run the training script
+NUM_GPUS_PER_NODE=${1:-8}
+echo $NUM_GPUS_PER_NODE
+
+NUM_NODES=${2:-1}
+CMD="torchrun --nnodes=$NUM_NODES --nproc_per_node=$NUM_GPUS_PER_NODE --master_addr=$ip --node_rank=$NODE_RANK"
+
+$CMD \
+fsdp_train.py --folder retrieval_attention3 --num_epochs=1000
+```
+
+## Dataset Curation
+TODO
+
 ## Citation
 ```
 @article{multiply,
